@@ -7,25 +7,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Sriracha&display=swap" rel="stylesheet">
     <title>IFuji</title>
 </head>
 
 <body>
-    <main class="container">
-        <nav class="navbar navbar-light col-md-12" style="background-color: #4d85fe;">
-            <a class="navbar-brand">Site de Gelo</a>
-            <div class="row" class="botoes">
-                <div><button type="button" class="btn btn-info">Home</button></div>
-                <div><button type="button" class="btn btn-info">Sobre Nós</button></div>
-                <div><button type="button" class="btn btn-info">Fale Conosco</button></div>
+    <main class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4d85fe;">
+            <a class="navbar-brand" href="#">Site de Gelo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+                aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Início<span class="sr-only">(página atual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Fale Conosco</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                </ul>
+
+                    <a class="navbar-brand" href="#">
+                        <img src="./img/carrinho-de-compras.png" width="30" height="30" alt="">
+                    </a>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                    <button class="btn btn-success my-2 my-sm-0" type="submit">Pesquisar</button>
+                </form>
             </div>
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-            </form>
         </nav>
+
+
+        <!-- //aqui inicia o miolo do pão// -->
 
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -40,9 +64,9 @@
                 </div>
             </div>
         </div>
-          
 
-        <div class="row">
+
+        <div class="row" id="card">
             <div class="card col-md-3">
                 <img src="img/cubosdegelo.jpg" class="card-img-top" alt="...">
                 <div class="card-body text-justify">
@@ -51,7 +75,7 @@
                     <a href="${noticia.url}" target="_blank" class="btn btn-primary">Comprar</a>
                 </div>
             </div>
-        
+
 
             <div class="card col-md-3" style="width: 18rem;">
                 <img src="img/formasdegelo.jpg" class="card-img-top" alt="...">
@@ -61,7 +85,7 @@
                     <a href="${noticia.url}" target="_blank" class="btn btn-primary">Comprar</a>
                 </div>
             </div>
-    
+
 
             <div class="card col-md-3" style="width: 18rem;">
                 <img src="img/gelodecoco.png" class="card-img-top" alt="...">
@@ -77,14 +101,12 @@
 
 
 
+        <!-- //aqui termina o miolo do pão// -->
 
-
-
-
-        <footer >
+        <footer>
             <nav class="navbar navbar-light" style="background-color: #4d85fe;">
                 <a class="navbar-brand">Site de Gelo
-        
+
                     <img src="img/All_rights_reserved_logo.svg.png" width="15" alt=""></a>
             </nav>
 
@@ -100,7 +122,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src="./script.js">
+    <script src="./js/script.js">
     </script>
 </body>
 
