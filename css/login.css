@@ -17,7 +17,6 @@
     border-radius: 15px;
     width: 960px;
     height: 50%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -30,8 +29,9 @@
     width: 40%;
     height: 100%;
     border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 
-    left: 60%;
+    left: 0%;
 }
 
 .title-login{
@@ -79,16 +79,18 @@ color: #fff ;
 .btn-primario{
     background-color: transparent;
     border: 1px solid #fff;
+    transition: background-color .5s;
 }
 
 .btn-primario:hover{
     background-color: #fff;
-    color: aqua;
+    color: #4d85fe;
 }
 
 .btn-secundario{
     background-color: #4d85fe ;
     border: 1px solid #4d85fe;
+    transition: background-color .5s;
 }
 
 .btn-secundario:hover{
@@ -98,17 +100,20 @@ color: #fff ;
 }
 .primeiro-content{
     display: flex;
-    display: none;
+}
+
+.primeiro-content .segunda-coluna{
+    z-index: 11;
 }
 
 .primeira-coluna{
     text-align: center;
-    flex: 1 0 auto;
+    width: 40%;
     z-index: 10;
 }
 
 .segunda-coluna{
-    flex: 2 0 auto;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,11 +151,13 @@ color: #fff ;
 }
 
 .segundo-content .primeira-coluna {
-order: 2;
+    order: 2;
+    z-index: -1;
 }
 
 .segundo-content .segunda-coluna{
     order: 1;
+    z-index: -1;
 }
 
 .password{
@@ -163,3 +170,175 @@ order: 2;
 .password::first-letter{
     text-transform: capitalize;
 }
+
+.sign-in-js .primeiro-content .primeira-coluna{
+    z-index: -1;
+}
+
+.sign-in-js .segundo-content .segunda-coluna{
+    z-index: 11;
+}
+
+.sign-in-js .segundo-content .primeira-coluna{
+    z-index: 13;
+}
+
+.sign-in-js .content-login::before{
+    left: 60%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: slidein 1.5s;
+
+    z-index: 12;
+}
+
+.sign-up-js .content-login::before{
+    animation: slideout 1.5s;
+    z-index: 12;
+}
+
+.sign-up-js .segundo-content .primeira-coluna,
+.sign-up-js .segundo-content .segunda-coluna{
+    z-index: -1;
+}
+
+.sign-up-js .primeiro-content .segunda-coluna{
+    z-index: 11;
+}
+
+.sign-up-js .primeiro-content .primeira-coluna{
+    z-index: 13;
+}
+
+/* Deslocamento Conteúdo atrás do content:before */
+
+.sign-in-js .primeiro-content .segunda-coluna{
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq 1.3s;
+    
+}
+
+.sign-up-js .segundo-content .segunda-coluna{
+    position: relative;
+    z-index: -1;
+    animation: deslocamentoDir 1.3s;
+    
+}
+
+/* Animação CSS para o Conteúdo */
+
+@keyframes deslocamentoEsq {
+    from {
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    25% {
+        left: -80px;
+        opacity: .5; 
+    }
+
+    50% {
+        left: -100px;
+        opacity: .2;
+    }
+
+    to {
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes deslocamentoDir {
+    from {
+
+        left: 0;
+        z-index: 12;
+
+    }
+
+    25% {
+        left: 80px;
+    }
+
+    50% {
+
+        left: 100px;
+
+    }
+
+    to {
+
+        left: 110px;
+        z-index: -1;
+    }
+}
+
+
+/* Animação CSS */
+
+@keyframes slidein {
+    from{
+
+        left: 0;
+        width: 40%;
+
+    }
+
+    25%{
+        left: 5%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+
+    75% {
+        left: 45%;
+        width: 50%;
+    }
+
+    to {
+
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideout {
+    from {
+
+        left: 60%;
+        width: 40%;
+
+    }
+
+    25% {
+        left: 45%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+
+    75% {
+        left: 5%;
+        width: 50%;
+    }
+
+    to {
+
+        left: 0;
+        width: 40%;
+    }
+}
+
