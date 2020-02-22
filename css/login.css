@@ -30,6 +30,8 @@
     width: 40%;
     height: 100%;
     border-top-left-radius: 15px;
+
+    left: 60%;
 }
 
 .title-login{
@@ -140,6 +142,24 @@ color: #fff ;
 /* segundo conteudo */
 .segundo-content {
     position: absolute;
-    display: none;
+    display: flex;
 }
 
+.segundo-content .primeira-coluna {
+order: 2;
+}
+
+.segundo-content .segunda-coluna{
+    order: 1;
+}
+
+.password{
+    color:#34495e;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.password::first-letter{
+    text-transform: capitalize;
+}
