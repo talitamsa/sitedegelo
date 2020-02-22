@@ -1,0 +1,101 @@
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ecf0f1;
+}
+
+.content {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.content::before{
+    content: "";
+    position: absolute;
+    background-color: #4d85fe;
+    width: 40%;
+    height: 100%;
+}
+
+.title{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.title-primario{
+color: #fff ;
+}
+
+.descricao{
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 30px;
+}
+
+.btn2{
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-primario{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.btn-primario:hover{
+    background-color: #fff;
+    color: aqua;
+}
+
+.primeiro-content{
+    display: flex;
+}
+
+.primeira-coluna{
+    text-align: center;
+    flex: 1 0 auto;
+    z-index: 10;
+}
+
+.segunda-coluna{
+    flex: 2 0 auto;
+}
+
+.lista-social-media{
+    display: flex;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.segundo-content {
+    position: absolute;
+    display: none;
+}
+
