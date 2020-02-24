@@ -7,59 +7,63 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/produtos.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Quebra-Gelo</title>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4d85fe;">
-            <a class="navbar-brand" href="#">Site de Gelo</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-                aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4d85fe;">
+        <a class="navbar-brand" href="#">Site de Gelo <img src="./img/pinguin1.png" alt="" width="30"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+            aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./index.html">Início<span class="sr-only">(página atual)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre Nós</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./produtos.html">Produtos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Fale Conosco</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-                </ul>
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav mr-auto" id="search">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">INÍCIO<span class="sr-only">(página atual)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">PRODUTOS</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">FALE CONOSCO</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">SOBRE NÓS</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">LOGIN</a>
+                </li>
+            </ul>
 
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                    <button class="btn btn-light my-2 my-sm-0" type="submit">Pesquisar</button>
-                </form>
-                <a class="ml-5" href="#">
-                    <img src="./img/carrinho-de-compras.png" width="30" height="30" alt="">
-                </a>
-            </div>
-        </nav>
-        <div class="container-fluid">
+            
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" id="pesquisar" type="search" placeholder="Pesquisar"
+                    aria-label="Pesquisar">
+                <button class="btn btn-light my-2 my-sm-0" type="submit">Pesquisar</button>
+            </form>
+            <a class="navbar-brand ml-3" href="#">
+                <img src="./img/carrinho-de-compras.png" width="30" height="30" alt="">
+            </a>
+        </div>
+        
+    </nav>
+        <div class="container">
             <div class="row">
-                <div class="col-md-3 mt-4">
-                    <p><a href="./index.html">Home</a> > <a href="./produtos.html">Produtos</a></p>
-                    <h3>Categorias</h3>
-                    <ul>
+                <div class="col-lg-3 col-md-3 col-sm-12 mt-4 font-weight-bold">
+                    <p class="text-muted" ><a href="./index.html">Home</a> > <a href="./produtos.html">Produtos</a></p>
+                    <h3 class="bg-primary rounded">Categorias</h3>
+                    <ul class="bg-primary rounded">
                         <li>Gelos</li>
                         <li>Gelos para lazer</li>
                         <li>Gelos para medicação</li>
                         <li>Bolsas Termicas</li>
                     </ul>
-                    <h3>Filtrar por preço</h3>
-                    <ul>
+                    <h3 class="bg-primary rounded">Filtrar por preço</h3>
+                    <ul class="bg-primary rounded">
                         <li>de R$1,00 até R$24,99</li>
                         <li>de R$25,00 até R$49,99</li>
                         <li>de R$50,00 até R$99,99</li>
@@ -67,91 +71,82 @@
                     </ul>
                 </div>
                 <div class="col-md-9 mt-4">
-                    <nav class="navbar" aria-label="...">
-                        <ul class="pagination pagination-sm">
+                    <p class="">Ordenar por:
+                        <select name="" id="filtros" class="border border-dark">
+                            <option selected disabled>Selecione</option>
+                            <option>Maior Preço</option>
+                            <option>Menor Preço</option>
+                            <option>Lançamento</option>
+                        </select>
+                    </p>
+                    <nav class="justify-content-center form-inline" aria-label="...">
+                        <ul class="pagination pagination-sm justify-content-center">
                             <li class="page-item disabled">
                                 <a class="page-link" href="#" tabindex="-1">1</a>
                             </li>
                             <li class="page-item"><a class="page-link" href="#">2</a></li>
                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                         </ul>
-                        <p>Ordenar por:
-                            <select name="" id="filtros" class="border border-dark">
-                                <option selected disabled>Selecione</option>
-                                <option>Mais Vendidos</option>
-                                <option>Maior Preço</option>
-                                <option>Menor Preço</option>
-                                <option>Lançamento</option>
-                            </select>
-                        </p>
                     </nav>
-                    <div class="row">
-                        <div class="card col-md-3" style="width: 18rem;">
+                    <div class="row" id="produtos">
+                        <div class="card col-lg-3 col-md-4 col-6" style="width: 18rem;">
                             <img src="img/gelodecoco.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Gelo de Coco</h5>
-                                <p class="card-text">cubos de gelo feitos com água de coco natural!</p>
-                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" class="card-text stretched-link"><p>R$27,00 <br> <b id="preco">R$24,00</b> <br> ou R$23,00 via Boleto Bancário</p></a>
                             </div>
                         </div>
-                        <div class="card col-md-3" style="width: 18rem;">
-                            <img src="img/gelodecoco.png" class="card-img-top" alt="...">
+                        <div class="card col-lg-3 col-md-4 col-6" style="width: 18rem;">
+                            <img src="./img/produto2.jpg" height="220px" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Gelo artificial</h5>
+                                <a href="#" class="card-text stretched-link"><p>R$27,00 <br> <b id="preco">R$24,00</b> <br> ou R$23,00 via Boleto Bancário</p></a>
+                            </div>
+                        </div>
+                        <div class="card col-lg-3 col-md-4 col-6" style="width: 18rem;">
+                            <img src="./img/produto3.jpg" height="220px" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Gelo flexivel</h5>
+                                <a href="#" class="card-text stretched-link"><p>R$27,00 <br> <b id="preco">R$24,00</b> <br> ou R$23,00 via Boleto Bancário</p></a>
+                            </div>
+                        </div>
+                        <div class="card col-lg-3 col-md-4 col-6" style="width: 18rem;">
+                            <img src="./img/produto4.jpg" height="220px" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Tech Gel</h5>
+                                <a href="#" class="card-text stretched-link"><p>R$27,00 <br> <b id="preco">R$24,00</b> <br> ou R$23,00 via Boleto Bancário</p></a>
+                            </div>
+                        </div>
+                        <div class="card col-lg-3 col-md-4 col-6" style="width: 18rem;">
+                            <img src="./img/produto5.jpg" height="220px" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Gelo artificial em espuma</h5>
+                                <a href="#" class="card-text stretched-link"><p>R$27,00 <br> <b id="preco">R$24,00</b> <br> ou R$23,00 via Boleto Bancário</p></a>
+                            </div>
+                        </div>
+                        <div class="card col-lg-3 col-md-4 col-6" style="width: 18rem;">
+                            <img src="img/gelodecoco.png" height="220px" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Gelo de Coco</h5>
-                                <p class="card-text">cubos de gelo feitos com água de coco natural!</p>
-                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" class="card-text stretched-link"><p>R$27,00 <br> <b id="preco">R$24,00</b> <br> ou R$23,00 via Boleto Bancário</p></a>
                             </div>
                         </div>
-                        <div class="card col-md-3" style="width: 18rem;">
-                            <img src="img/gelodecoco.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Gelo de Coco</h5>
-                                <p class="card-text">cubos de gelo feitos com água de coco natural!</p>
-                                <a href="#" class="btn btn-primary">Comprar</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3" style="width: 18rem;">
-                            <img src="img/gelodecoco.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Gelo de Coco</h5>
-                                <p class="card-text">cubos de gelo feitos com água de coco natural!</p>
-                                <a href="#" class="btn btn-primary">Comprar</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3" style="width: 18rem;">
-                            <img src="img/gelodecoco.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Gelo de Coco</h5>
-                                <p class="card-text">cubos de gelo feitos com água de coco natural!</p>
-                                <a href="#" class="btn btn-primary">Comprar</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3" style="width: 18rem;">
-                            <img src="img/gelodecoco.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Gelo de Coco</h5>
-                                <p class="card-text">cubos de gelo feitos com água de coco natural!</p>
-                                <a href="#" class="btn btn-primary">Comprar</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3" style="width: 18rem;">
+                        <div class="card col-lg-3 col-md-4 col-6" style="width: 18rem;">
                             <img src="./img/pinguin1.png" height="270" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Mascote do site</h5>
-                                <p class="card-text">cubos de gelo feitos com água de coco natural!</p>
-                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" class="card-text stretched-link"><p>R$2000,00 <br> <b id="preco">R$24,00</b> <br> ou R$23,00 via Boleto Bancário</p></a>
                             </div>
                         </div>
-                        <div class="card col-md-3" style="width: 18rem;">
+                        <div class="card col-lg-3 col-md-4 col-6" style="width: 18rem;">
                             <img src="./img/Olaf.png" height="270" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Olaf deboas</h5>
-                                <p class="card-text">cubos de gelo feitos com água de coco natural!</p>
-                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" class="card-text stretched-link"><p>R$1000,00 <br> <b id="preco">R$24,00</b> <br> ou R$23,00 via Boleto Bancário</p></a>
                             </div>
                         </div>
                     </div>
-                    <nav aria-label="...">
+                    <nav aria-label="..." class="mt-2">
                         <ul class="pagination pagination-sm justify-content-center">
                             <li class="page-item disabled">
                                 <a class="page-link" href="#" tabindex="-1">1</a>
