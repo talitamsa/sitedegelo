@@ -1,17 +1,61 @@
-.navbar{
-font-family: 'Roboto Condensed', sans-serif;
+
+.v-error{
+    border-color: red;
 }
-button{
-cursor: pointer;
-border-radius: 10px;
-margin: 0px 15px 0px 15px;
+
+.v-success{
+    border-color: green;
 }
+
+.v-error:focus{
+    outline-color:red;
+    box-shadow:0 0 10px red;
+    border-color: red;
+}
+
+.v-success:focus{
+    outline-color:green;
+    box-shadow:0 0 10px green;
+    border-color: green;
+}
+
+
+
+
+
+
+
 .d-block{
-height: 375px;
-}
-.card{
-margin: 11px 11px 0px 6px;
-display: flex;
-justify-content: space-around;
-background-color: black;
-}
+    height: 375px;
+    }
+    /* #card{
+    display: flex;
+    justify-content: space-around;
+    } */
+    #redes-sociais{
+        display: flex;
+    }
+    
+
+    #conteudoNavbarSuportado{
+        font-family: 'Raleway', 'Extra-Light';
+        font-size: small;
+        text-shadow: 4px 4px 4px rgb(139, 137, 137);
+        display: flex;
+        
+    }
+    #search{
+        justify-content: space-around;
+        width: 775px;
+    }
+    #search:hover{
+        color: rgba(203, 75, 226, 0.37);
+    }
+    #nome-site-footer{
+        font-size: small;
+        color: black;
+    }
+
+    #btnfinalizarcadastro {
+        margin-bottom: 30px;
+    }
