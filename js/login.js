@@ -1,8 +1,11 @@
 var btnSignin = document.querySelector("#signin");
 var btnSignup = document.querySelector("#signup");
 var body = document.querySelector("body");
-var cpf = document.getElementById("cpf")
-var dta = document.getElementById("dtaNascimento")
+var cpf = document.getElementById("cpf");
+var data = document.getElementById("dtaNascimento");
+var nome = document.getElementById("nome");
+var senha = document.querySelector(".senha");
+var email = document.querySelector(".email");
 
 btnSignin.addEventListener("click", function (){
     body.className = "sign-in-js";
@@ -11,6 +14,18 @@ btnSignin.addEventListener("click", function (){
 btnSignup.addEventListener("click", function (){
     body.className= "sign-up-js";
 })
+
+// nome.addEventListener('blur', (event) => {
+//     if (nome.value == ""){
+//         alert ("Por favor preencha o campo Nome");
+//     }
+// })
+
+// cpf.addEventListener('blur', (event) => {
+//     if (cpf.value == ""){
+//         alert ("Por favor prencha o campo CPF");
+//     }
+// })
 
 cpf.addEventListener('keyup', (event) => {
     if (isNaN(cpf.value)) {
@@ -21,12 +36,33 @@ cpf.addEventListener('keyup', (event) => {
     }
 });
 
-// dta.addEventListener('keyup', (event) => {
-//     if (isNaN(dta.value)) {
-//         dta.value = dta.value.substring(0, (dta.value.length - 1));
+// data.addEventListener('blur', (event) => {
+//     if (data.value == ""){
+//         alert ("Por favor preencha o campo Data de Nascimento");
 //     }
-//     if (dta.value.length >= 8) {
-//         dta.value = dta.value.substring(0, 8);
+// })
+
+// email.addEventListener('blur', (event) => {
+//     if (email.value == ""){
+//         alert ("Por favor preencha o campo Email")
 //     }
-// });
+// })
+
+// senha.addEventListener('blur', (event) => {
+//     if (senha.value == ""){
+//         alert ("Por favor preencha o campo Senha");
+//     }
+// })
+
+    
+
+
+ data.addEventListener('keyup', (event) => {
+    if (isNaN(data.value)) {
+        data.value = data.value.substring(0, (data.value.length - 1));
+     }
+     if (data.value.length >= 8) {
+        data.value = data.value.substring(0, 8);
+     }
+ });
 
