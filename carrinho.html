@@ -67,7 +67,8 @@
                                     <div class="cart-item cyc"> <img src="img/baldedegelo.jpg" class="img-responsive">	</div>
                                 <div class="cart-item-info">
                                     <h5><a class="item_nome" href="#">Balde de Gelo</a><span>Vendido e fornecido por: Quebra-Gelo.</span></h5>
-                                    <span id="item_preco">R$30,00</span>
+                                    <span>R$30,00</span>
+                                    <input type="hidden" id="item_preco1" value="30">
                                     <ul> <p>Quantidade:  </p> <input width="14" height="14" value="-" class="minus" field="quantity" type="button"> 
                                     <input class="arredondar" class="qtd" value="1" type="text" id="quantity" style="min-width:10px;">
                                         <input width="14" height="14" value="+" class="plus" field="quantity" type="button">
@@ -79,13 +80,14 @@
                                     </div>
                                         </div>
 
-			 <div class="cart-header">
+			 <div class="cart-header" id="item_preco1" value="30">
                 <div class="close"> <img src="./img/excluir.png" width="25" heigth="25" id="apagar2" onclick="removeProduto(this)" > </div>
 				 <div class="cart-sec">
 						<div class="cart-item cyc"> <img src="img/gelodecoco.png" class="img-responsive">	</div>
 					   <div class="cart-item-info">
 						<h5><a class="item_nome" href="#">Gelo de coco</a><span>Vendido e fornecido por: Quebra-Gelo.</span></h5>
-                        <span id="item_preco">R$</span>
+                        <span>R$20,00</span>
+                        <input type="hidden" id="item_preco2" value="20">
 						<ul> <p>Quantidade:  </p> <input width="14" height="14" value="-" class="minus" field="quantity" type="button"> 
                         <input class="arredondar" class="qtd" value="1" type="text" id="quantity" style="min-width:10px;">
 							   <input width="14" height="14" value="+" class="plus" field="quantity" type="button">
@@ -100,7 +102,9 @@
         <h5> Resumo da Compra </h5>
             <div class="card" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><strong> Subtotal </strong> <p> <span id="subtotalValor"> R$ 0,00 </span></p> </li>
+                    <div id="subtotal">
+                        <li class="list-group-item"><strong> Subtotal </strong> <p> <span id="subtotalValor"> R$ 0,00 </span></p> </li>
+                    </div>
                     <li class="list-group-item"><strong> Desconto </strong> <div class="p-2">Cupom de desconto: 
                     <form class="form-inline my-2 my-lg-0">
                     <input class="form-control form-control-sm" id="pesquisar" type="searchDesconto" placeholder="Insira o seu codigo">
