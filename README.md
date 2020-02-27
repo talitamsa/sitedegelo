@@ -1,4 +1,4 @@
-Nome dos integrantes: Andre, 
+Nome dos integrantes: André, 
 Carlos,
 Kennedy,
 Talita,
