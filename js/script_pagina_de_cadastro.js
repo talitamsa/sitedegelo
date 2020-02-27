@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 let inputCPF = document.getElementById('cpfUsuario');
 let inputSenha = document.getElementById('senhaUsuario');
 let inputConfirmarSenha = document.getElementById('confirmarSenhaUsuario');
