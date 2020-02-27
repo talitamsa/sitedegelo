@@ -49,7 +49,7 @@ btnFiltrar.onclick = function () {
                         <div class="card-body">
                             <h5 class="card-title">Gelo de Coco</h5>
                             <a href="#" class="card-text stretched-link">
-                                <p> <s>de: R$20,00 </s> <br> <b id="preco">por R$15,00</b> <br> ou R$10,00 via Boleto
+                                <p> <s>de: R$16,65 </s> <br> <b id="preco">por R$15,00</b> <br> ou R$10,00 via Boleto
                                     Bancário</p>
                             </a>
                         </div>
@@ -103,7 +103,7 @@ btnFiltrar.onclick = function () {
                         <div class="card-body">
                             <h5 class="card-title">Gelo de Coco</h5>
                             <a href="#" class="card-text stretched-link">
-                                <p> <s>de: R$20,00 </s> <br> <b id="preco">por R$15,00</b> <br> ou R$10,00 via Boleto
+                                <p> <s>de: R$16,65 </s> <br> <b id="preco">por R$15,00</b> <br> ou R$10,00 via Boleto
                                     Bancário</p>
                             </a>
                         </div>
