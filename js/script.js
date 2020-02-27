@@ -19,15 +19,7 @@ inputCPF.addEventListener('keyup', (event)=>{
         }
 })
 
-inputCPFTitular.addEventListener('keyup', (event)=>{
-    //inputCPF.value
-        if(isNaN(inputCPFTitular.value)){
-            inputCPFTitular.value = inputCPFTitular.value.substring(0, (inputCPFTitular.value.length -1))
-        }
-        if(inputCPFTitular.value.length >= 11){
-            inputCPFTitular.value = inputCPFTitular.value.substring(0, 11)
-        }
-} )
+
 
 
 function buscarCep(cep){
@@ -46,7 +38,7 @@ function buscarCep(cep){
         inputCidade.value = dados.localidade
         selectEstado.value = dados.uf
 
-        $('#compraFinalizada').modal('show')
+        // $('#compraFinalizada').modal('show')
         
     })
 }
@@ -61,6 +53,7 @@ inputCEP.addEventListener('keyup',  (event)=>{
             buscarCep(inputCEP.value)
         }
 })
+
 
 
 //validação  senha
