@@ -8,7 +8,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/produtos.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Quebra-Gelo</title>
+    <title>Categoria Gelos</title>
 </head>
 
 <body>
@@ -75,7 +75,7 @@
                         <option selected disabled>Selecione</option>
                         <option value="maiorPreco">Maior Preço</option>
                         <option value="menorPreco">Menor Preço</option>
-                        <option value="lancamento">Lançamento</option>
+                        <option value="lancamento" disabled>Lançamento</option>
                     </select>
                     <button type="button" id="filtrar" class="btn btn-secondary">Filtrar</button>
                 </p>
@@ -159,46 +159,6 @@
                             </a>
                         </div>
                     </div>
-                    <div class="card col-lg-3 col-md-4 col-6" id="produto7" style="width: 18rem;">
-                        <img src="./img/formasdegelo.jpg" height="270" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Formas de Gelo</h5>
-                            <a href="#" class="card-text stretched-link">
-                                <p> <s>de: R$18,00</s> <br> <b id="preco">por: R$15,00</b> <br> ou R$10,00 via Boleto
-                                    Bancário</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card col-lg-3 col-md-4 col-6" id="produto8" style="width: 18rem;">
-                        <img src="./img/caixa-de-isopor.png" height="270" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Caixa de Isopor</h5>
-                            <a href="#" class="card-text stretched-link">
-                                <p> <s>de: R$50,00</s> <br> <b id="preco">por: R$24,00</b> <br> ou R$23,00 via Boleto
-                                    Bancário</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card col-lg-3 col-md-4 col-6" id="produto9" style="width: 18rem;">
-                        <img src="./img/pinguin1.png" height="270" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Mascote do site</h5>
-                            <a href="#" class="card-text stretched-link">
-                                <p> <s>de: R$2000,00</s> <br> <b id="preco">por: R$1350,00</b> <br> ou R$1000,00 via
-                                    Boleto Bancário</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card col-lg-3 col-md-4 col-6" id="produto10" style="width: 18rem;">
-                        <img src="./img/Olaf.png" height="270" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Olaf deboas</h5>
-                            <a href="#" class="card-text stretched-link">
-                                <p> <s>de: R$1000,00</s> <br> <b id="preco">por: R$800,00</b> <br> ou R$500,00 via
-                                    Boleto Bancário</p>
-                            </a>
-                        </div>
-                    </div>
                 </div>
                 <nav aria-label="..." class="mt-2">
                     <ul class="pagination pagination-sm justify-content-center">
@@ -256,7 +216,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src="./js/Produtos.js"></script>
+    <script src="./js/gelos.js"></script>
 </body>
 
 </html>
