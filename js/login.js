@@ -7,12 +7,12 @@ var nome = document.getElementById("nome");
 var senha = document.querySelector(".senha");
 var email = document.querySelector(".email");
 
-btnSignin.addEventListener("click", function (){
+btnSignin.addEventListener("click", function () {
     body.className = "sign-in-js";
 })
 
-btnSignup.addEventListener("click", function (){
-    body.className= "sign-up-js";
+btnSignup.addEventListener("click", function () {
+    body.className = "sign-up-js";
 })
 
 // nome.addEventListener('blur', (event) => {
@@ -36,33 +36,13 @@ cpf.addEventListener('keyup', (event) => {
     }
 });
 
-// data.addEventListener('blur', (event) => {
-//     if (data.value == ""){
-//         alert ("Por favor preencha o campo Data de Nascimento");
-//     }
-// })
-
-// email.addEventListener('blur', (event) => {
-//     if (email.value == ""){
-//         alert ("Por favor preencha o campo Email")
-//     }
-// })
-
-// senha.addEventListener('blur', (event) => {
-//     if (senha.value == ""){
-//         alert ("Por favor preencha o campo Senha");
-//     }
-// })
-
-    
-
-
- data.addEventListener('keyup', (event) => {
+data.addEventListener('keyup', (event) => {
     if (isNaN(data.value)) {
         data.value = data.value.substring(0, (data.value.length - 1));
-     }
-     if (data.value.length >= 8) {
+    }
+
+    if (data.value.length >= 8) {
         data.value = data.value.substring(0, 8);
-     }
- });
+    }
+});
 
