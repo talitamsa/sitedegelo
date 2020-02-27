@@ -1,34 +1,3 @@
-
-//validação do CPF
-
-let inputCPF = document.getElementById('cpfUsuario');
-
-inputCPF.addEventListener('keyup', (event) => {
-    if (isNaN(inputCPF.value)) {
-        inputCPF.value = inputCPF.value.substring(0, (inputCPF.value.length - 1));
-    }
-    if (inputCPF.value.length >= 11) {
-        inputCPF.value = inputCPF.value.substring(0, 11);
-    }
-});
-
-//validação da Senha
-
-let inputSenha = document.getElementById('senhaUsuario');
-let inputConfirmarSenha = document.getElementById('confSenhaUsuario');
-
-inputConfirmarSenha.addEventListener('keyup', (e) => {
-    if (inputConfirmarSenha.value != inputSenha.value) {
-        inputConfirmarSenha.setAttribute('class', 'form-control is-invalid');
-    } else {
-        inputConfirmarSenha.setAttribute('class', 'form-control is-valid');
-    }
-    })
-
-
-
-//validar CEP
-
 //pesquisar o cep
 
 

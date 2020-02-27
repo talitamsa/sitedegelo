@@ -57,27 +57,27 @@
     </div>
 </div>
 
-<div class="p-2"></div>
-<button class="btn btn-info btn-lg">Continue comprando :)</button>
+
     <div class="p-3"></div>
     <main class=container>
         <form id="checkout" class="col-md-12 row">
             <div class="col-md-6">
-                <header class="bg-light text-dark p-2 border solid"><img src="./img/truck.png" width="30" height="30" alt=""> Entrega
+                <header class="bg-primary text-light p-2 border solid"><img src="./img/truck.png" width="50" height="50" alt=""> <strong>Entrega </strong>
                 </header>
                 <div class="form-group">
+                        <div class="p-2"></div>
                     <label for="cepUsuario">CEP</label>
                     <input class="form-control" type="text" id="cepUsuario" name="cepUsuario"
-                        placeholder="Digite o seu numero do CEP">
+                        placeholder="Digite o seu numero do CEP" required>
                 </div>
                 <div class="form-group">
                     <label for="enderecoUsuario">Endereço</label>
                     <input class="form-control" type="text" id="enderecoUsuario" name="enderecoUsuario"
-                        placeholder="Digite o seu endereço">
+                        placeholder="Digite o seu endereço" required>
                     <div class="form-group">
                         <label for="numeroEnderecoUsuario">Numero</label>
                         <input class="form-control" type="text" id="numeroEnderecoUsuario" name="numeroEnderecoUsuario"
-                            placeholder="Digite o seu numero">
+                            placeholder="Digite o seu numero" required>
                     </div>
                     <div class="form-group">
                         <label for="complementoUsuario">Complemento</label>
@@ -87,18 +87,18 @@
                     <div class="form-group">
                         <label for="bairroUsuario">Bairro</label>
                         <input class="form-control" type="text" id="bairroUsuario" name="bairroUsuario"
-                            placeholder="Digite o seu bairro">
+                            placeholder="Digite o seu bairro" required>
                     </div>
                     <div class="form-group row">
                         <div class="col-6">
                             <label for="cidadeUsuario">Cidade</label>
                             <input class="form-control" type="text" id="cidadeUsuario" name="cidadeUsuario"
-                                placeholder="Digite o seu cidade">
+                                placeholder="Digite o seu cidade" required>
                         </div>
                         <!-- <div class="form-group row"> -->
                         <div class="col-6">
                             <label for="estadoUsuario">Estado</label>
-                            <select class="form-control" name="estados-brasil">
+                            <select class="form-control" name="estados-brasil" required>
                                 <option value="" disable selected>Estado</option>"
                                 <option value="AC">Acre</option>
                                 <option value="AL">Alagoas</option>
@@ -135,12 +135,12 @@
                     <!-- <div class="col-6"> -->
                     <div class="form-check">
                         <label for="exampleRadios1">
-                            Frete rápido <br> R$50,00
+                            Frete especial <br> R$100,00
                         </label>
                         <!-- <div class="col-6"> -->
                         <input type="radio" name="formasEnvio" id="freteRapido">
                         <label for="exampleRadios2">
-                            Frete normal <br> R$20,00
+                            Frete normal <br> R$30,00
                         </label>
                         <input type="radio" name="formasEnvio" id="freteNormal">
                     </div>
@@ -149,26 +149,25 @@
             </div>
             </div>
             <div class="col-md-6">
-                <header class="bg-light text-dark p-2 border solid"><img src="./img/cartao-de-credito.png" width="30" height="30"
-                        alt=""> Pagamento
+                <header class="bg-primary text-light p-2 border solid"><img src="./img/cartao-de-credito.png" width="50" height="50"
+                        alt=""> <strong> Pagamento </strong>
                 </header>
-                <div class="p-3">
+                <div class="p-2"></div>
                     <label>Resumo da Compra</label>
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body"> <img src="images/gelo.jpg" width="65" height="65"> <br>
                                 Produto: <br>
-                                Quantidade:<br>
-
+                                Quantidade:<br> 
                             </div>
                         </div>
-                    </div>
                 </div>
                 <div class="p-3">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                Total:
+                                Frete:<br>
+                                Total: <span id="totalValor"> </span>
                             </div>
                         </div>
                     </div>
@@ -180,31 +179,31 @@
                 <div class="form-group">
                     <label for="numeroCartao">Numero do cartão</label>
                     <input class="form-control" type="number" id="numeroCartao" name="numeroCartao"
-                        placeholder="Digite o numero do cartão">
+                        placeholder="Digite o numero do cartão" maxlength="16" required>
                 </div>
                 <div class="form-group row">
                     <div class="col-8">
                         <label for="DtaValCartao">Data de validade</label>
                         <input class="form-control" type="month" id="DtaValCartao" name="DtaValCartao"
-                            placeholder="Data de validade">
+                            placeholder="Data de validade" required>
                     </div>
                     <!-- <div class="form-group"> -->
                     <div class="col-4">
                         <label for="segurCartao">CVV</label>
                         <input class="form-control" type="number" id="segurCartao" name="segurCartao"
-                            placeholder="Digite o código de segurança">
+                            placeholder="Digite o código de segurança" maxlength="3" required>
                     </div>
 
                 </div>
                 <div class="form-group">
                     <label for="nomeCartao">Nome do Titular</label>
                     <input class="form-control" type="text" id="nomeCartao" name="nomeCartao"
-                        placeholder="Digite o nome do titular">
+                        placeholder="Digite o nome do titular" required>
                 </div>
                 <div class="form-group">
                     <label for="cpfTituCartao">CPF do Titular</label>
                     <input class="form-control" type="number" id="cpfTituCartao" name="cpfTituCartao"
-                        placeholder="Digite o CPF do titular">
+                        placeholder="Digite o CPF do titular" maxlength="11" required>
                 </div>
                 <div class="d-flex justify-content-end"> <button class="btn btn-primary btn-lg" type ="button" data-toggle="modal" data-target="#compraFinalizada" >Finalize sua compra</button> </div>
             <div class="p-2"></div>    
@@ -225,7 +224,7 @@
               <p>Uhuuuu, parabéns pela sua compra!</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-success"  data-toggle="modal" data-target="#compraFinalizada" type="button">Fechado!</button>
+              <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#compraFinalizada" type="button">Fechado!</button>
             </div>
           </div>
         </div>
@@ -264,7 +263,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

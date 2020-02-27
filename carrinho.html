@@ -69,9 +69,9 @@
                                     <h5><a class="item_nome" href="#">Balde de Gelo</a><span>Vendido e fornecido por: Quebra-Gelo.</span></h5>
                                     <span>R$30,00</span>
                                     <input type="hidden" id="item_preco1" value="30">
-                                    <ul> <p>Quantidade:  </p> <input width="14" height="14" value="-" class="minus" field="quantity" type="button"> 
+                                    <ul> <p>Quantidade:  <input type=image src="./img/menos.png" width="15" height="15" value="-" class="minus" field="quantity" onlick="subtrai" > 
                                     <input class="arredondar" class="qtd" value="1" type="text" id="quantity" style="min-width:10px;">
-                                        <input width="14" height="14" value="+" class="plus" field="quantity" type="button">
+                                    <input type=image src="./img/mais.png" width="15" height="15" value="+" class="plus" field="quantity" onclick="soma" ></p> 
                                     </ul>		
 
                             </div>
@@ -88,9 +88,9 @@
 						<h5><a class="item_nome" href="#">Gelo de coco</a><span>Vendido e fornecido por: Quebra-Gelo.</span></h5>
                         <span>R$20,00</span>
                         <input type="hidden" id="item_preco2" value="20">
-						<ul> <p>Quantidade:  </p> <input width="14" height="14" value="-" class="minus" field="quantity" type="button"> 
+						<ul> <p>Quantidade:  <input type=image src="./img/menos.png" width="15" height="15" value="-" class="minus" field="quantity" onclick="subtrai" > 
                         <input class="arredondar" class="qtd" value="1" type="text" id="quantity" style="min-width:10px;">
-							   <input width="14" height="14" value="+" class="plus" field="quantity" type="button">
+							   <input type=image src="./img/mais.png" width="15" height="15" value="+" class="plus" field="quantity" onclick="soma"></p> 
 						</ul>    
                               </div>    
                                     </div>			  
@@ -109,14 +109,14 @@
                     <form class="form-inline my-2 my-lg-0">
                     <input class="form-control form-control-sm" id="pesquisar" type="searchDesconto" placeholder="Insira o seu codigo">
                                   
-                    <button class="btn btn-outline-dark btn-sm" type="submit">Inserir</button></div></form></li>
+                    <button class="btn btn-outline-primary btn-sm" type="submit">Inserir</button></div></form></li>
                     </strong></li>
                     <li class="list-group-item"><strong> Total </strong> <span id="totalValor">R$ 0,00</span> </li>
                 </ul>
                 <div class="p-2"></div>
                     <div class="d-flex flex-column bd-highlight mb-3">
-                        <div class="p-2 bd-highlight"><button type="button" class="btn btn-secondary btn-block" href="checkout.html">Continuar</button> </div>
-                        <div class="p-2 bd-highlight"><button type="button" class="btn btn-outline-dark btn-block" href="produtos.html"> Escolher mais produtos </button></div>
+                        <div class="p-2 bd-highlight"><button type="button" class="btn btn-primary btn-block" href="checkout.html">Continuar</button> </div>
+                        <div class="p-2 bd-highlight"><button type="button" class="btn btn-outline-primary btn-block" href="produtos.html"> Escolher mais produtos </button></div>
 
         </div>
             </div>
@@ -133,7 +133,7 @@
 </h5>                     <form class="form-inline my-2 my-lg-0">
 
                 <input class="form-control form-control" id="pesquisar" type="searchCEP" placeholder="Digite o CEP">
-                <button class="btn btn-outline-dark" type="submit">Calcular</button></div></li>
+                <button class="btn btn-outline-primary" type="submit">Calcular</button></div></li>
               </div>
           </div>       </form>         </ul>
                 </div>
